@@ -1,0 +1,37 @@
+package commands;
+
+<<<<<<< HEAD
+import gamelogic.Counter;
+import gamelogic.Client;
+
+public class CounterToKeepCommand extends RemoteCommand {
+	
+	private Counter aCounter;
+	private String aPlayerID;
+=======
+import gamelogic.Client;
+import gamelogic.Counter;
+
+public class CounterToKeepCommand extends RemoteCommand{
+
+	Counter aCounter;
+	String aPlayerID;
+>>>>>>> c695be0d7a1e54efe7b449b356a982c725e89907
+
+	public CounterToKeepCommand(Counter pCounter, String pPlayerID) {
+		aCounter = pCounter;
+		aPlayerID = pPlayerID;
+	}
+
+	@Override
+	public void execute() {
+		Client.instance().getGame().chooseCounterToKeep(aCounter, aPlayerID);
+		
+	}
+<<<<<<< HEAD
+	
+	
+=======
+>>>>>>> c695be0d7a1e54efe7b449b356a982c725e89907
+
+}
